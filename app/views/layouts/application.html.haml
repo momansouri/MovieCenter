@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title RottenPotatoes!
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+  %body
+    - if flash[:notice] 
+      #notice.message= flash[:notice]
+    - elsif flash[:warning]
+      #warning.message= flash[:warning]
+    #main
+      = yield
